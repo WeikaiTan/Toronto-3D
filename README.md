@@ -8,6 +8,8 @@ Details on the dataset can be found at [arXiv](https://arxiv.org/abs/2003.08284)
 
 Dataset can be downloaded at [Link](https://1drv.ms/u/s!Amlc6yZnF87psX6hKS8VOQllVvj4?e=yWhrYX).
 
-If you have any questions, or have any suggestions to help us improve the dataset, please contact [Weikai Tan](mailto:weikai.tan@uwaterloo.ca).
+Toronto-3D belongs to [Mobile Sensing and Geodata Science Lab](https://uwaterloo.ca/mobile-sensing/), University of Waterloo. 
 
 Teledyne Optech is acknowledged for providing mobile LiDAR point cloud data. Thanks Jing Du and Dr. Guorong Cai from Jimei University for point cloud labeling.
+
+If you have any questions, or have any suggestions to help us improve the dataset, please contact [Weikai Tan](mailto:weikai.tan@uwaterloo.ca).
