@@ -15,14 +15,14 @@ Teledyne Optech is acknowledged for providing mobile LiDAR point cloud data coll
 If you have questions, or any suggestions to help us improve the dataset, please contact [Weikai Tan](mailto:weikai.tan@uwaterloo.ca).
 
 ---
-## Point cloud attributes <a name="attributes"></a>
+## <a name="attributes"></a> Point cloud attributes 
 * XYZ
 * RGB
 * Intensity
 * GPS time
 * Scan angle rank
 
-## Classes <a name="classes"></a>
+## <a name="classes"></a> Classes 
 * Road (label 1) 
 * Road marking (label 2)
 * Natural (label 3)
@@ -34,16 +34,21 @@ If you have questions, or any suggestions to help us improve the dataset, please
 * unclassified (label 0)
 
 ---
-## Known issues <a name="issues"></a>
+## <a name="issues"></a> Known issues 
 1. Point RGB assignments on taller vehicles.
+
 ![Image](Screenshots/Issue_1.png)
 
 2. Point RGB artifact assignments on moving vehicles.
+
 ![Image](Screenshots/Issue_2.png)
 
 3. Point acquisition on moving vehicles.
+
 ![Image](Screenshots/Issue_3.png)
 ---
-## Changelog <a name="changelog"></a>
+## <a name="changelog"></a> Changelog 
+
+* [2020-04-23] Uploaded newest version. Fixed some labelling errors.
 
 * [2020-03-22] Uploaded newest version
