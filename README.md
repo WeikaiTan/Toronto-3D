@@ -6,7 +6,9 @@ Toronto-3D is a large-scale urban outdoor point cloud dataset acquired by an MLS
 
 Details on the dataset can be found at [arXiv](https://arxiv.org/abs/2003.08284).
 
-Dataset can be downloaded at [Link](https://1drv.ms/u/s!Amlc6yZnF87psX6hKS8VOQllVvj4?e=yWhrYX). Check [Changelog](#changelog) for changes.
+Dataset can be downloaded at [OneDrive](https://1drv.ms/u/s!Amlc6yZnF87psX6hKS8VOQllVvj4?e=yWhrYX) or [百度网盘](https://pan.baidu.com/s/16FVZqPU-I56rFRrGWoaxXA)(提取码：aewp)
+
+Check [Changelog](#changelog) for changes.
 
 Toronto-3D belongs to [Mobile Sensing and Geodata Science Lab](https://uwaterloo.ca/mobile-sensing/), University of Waterloo. 
 
