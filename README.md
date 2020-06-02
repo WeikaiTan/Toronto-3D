@@ -4,10 +4,9 @@
 
 Toronto-3D is a large-scale urban outdoor point cloud dataset acquired by an MLS system in Toronto, Canada for semantic segmentation. This dataset covers approximately 1 km of road and consists of about 78.3 million points. Point clouds has [10 attributes](#attributes) and classified in [8 labelled object classes](#classes). There are some [known issues](#issues).
 
-Details on the dataset can be found at [arXiv](https://arxiv.org/abs/2003.08284).
+Details on the dataset can be found at [arXiv](https://arxiv.org/abs/2003.08284). Revisions on the labels will lead to different results from the published paper, and updated results will be updated [here](#results).
 
-Dataset can be downloaded at [OneDrive](https://1drv.ms/u/s!Amlc6yZnF87psX6hKS8VOQllVvj4?e=yWhrYX) or [百度网盘](https://pan.baidu.com/s/16FVZqPU-I56rFRrGWoaxXA)(提取码：aewp)
-
+Dataset can be downloaded at [OneDrive](https://1drv.ms/u/s!Amlc6yZnF87psX6hKS8VOQllVvj4?e=yWhrYX) or [百度网盘](https://pan.baidu.com/s/16FVZqPU-I56rFRrGWoaxXA)(提取码：aewp).
 Check [Changelog](#changelog) for changes.
 
 Toronto-3D belongs to [Mobile Sensing and Geodata Science Lab](https://uwaterloo.ca/mobile-sensing/), University of Waterloo. 
@@ -15,6 +14,11 @@ Toronto-3D belongs to [Mobile Sensing and Geodata Science Lab](https://uwaterloo
 Teledyne Optech is acknowledged for providing mobile LiDAR point cloud data collected by [Maverick](https://www.teledyneoptech.com/en/products/mobile-survey/maverick/). Thanks Jing Du and Dr. Guorong Cai from Jimei University for point cloud labelling.
 
 If you have questions, or any suggestions to help us improve the dataset, please contact [Weikai Tan](mailto:weikai.tan@uwaterloo.ca).
+
+---
+## <a name="results"></a> Semantic segmentation results 
+
+To be updated
 
 ---
 ## <a name="attributes"></a> Point cloud attributes 
@@ -51,6 +55,6 @@ If you have questions, or any suggestions to help us improve the dataset, please
 ---
 ## <a name="changelog"></a> Changelog 
 
-* [2020-04-23] Uploaded newest version. Fixed some labelling errors.
+* [2020-04-23] Uploaded newest version. Fixed some labelling errors. Major revision on cars.
 
-* [2020-03-22] Uploaded newest version
+* [2020-03-22] Uploaded newest version.
