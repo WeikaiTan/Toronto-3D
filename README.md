@@ -16,9 +16,20 @@ Teledyne Optech is acknowledged for providing mobile LiDAR point cloud data coll
 If you have questions, or any suggestions to help us improve the dataset, please contact [Weikai Tan](mailto:weikai.tan@uwaterloo.ca).
 
 ---
-## <a name="results"></a> Semantic segmentation results 
+## <a name="results"></a> Semantic segmentation results with point coordinates
 
-To be updated
+More results to be added
+
+| Methods          | OA     | mIoU   | Road   | Road mrk | Natural | Building | Util line | Pole   | Car    | Fence  |
+|------------------|--------|--------|--------|----------|---------|----------|-----------|--------|--------|--------|
+| [PointNet++](https://github.com/charlesq34/pointnet2/blob/42926632a3c33461aebfbee2d829098b30a23aaa/models/pointnet2_sem_seg.py#L18)       | 84.88% | 41.81% | 89.27% | 0.00%    | 69.06%  | 54.16%   | 43.78%    | 23.30% | 52.00% | 2.95%  |
+| PointNet++ *     | 91.66% | 58.01% | 92.71% | 7.68%    | 84.30%  | 81.83%   | 67.44%    | 63.30% | 60.92% | 5.92%  |
+| [PointNet++ MSG](https://github.com/charlesq34/pointnet2/blob/42926632a3c33461aebfbee2d829098b30a23aaa/models/pointnet2_cls_msg.py#L17) | 92.56% | 59.47% | 92.90% | 0.00%    | 86.13%  | 82.15%   | 60.96%    | 62.81% | 76.41% | 14.43% |
+| [KPFCNN](https://github.com/HuguesTHOMAS/KPConv/blob/132fdc628fb4850548e931c8b02c6325e7cac85e/training_NPM3D.py#L49)           | 95.39% | 69.11% | 94.62% | 0.06%    | 96.07%  | 91.51%   | 87.68%    | 81.56% | 85.66% | 15.72% |
+| [TGNet](https://doi.org/10.1109/TGRS.2019.2958517)            | 94.08% | 61.34% | 93.54% | 0.00%    | 90.83%  | 81.57%   | 65.26%    | 62.98% | 88.73% | 7.85%  |
+| MS-TGNet         | 95.71% | 70.50% | 94.41% | 17.19%   | 95.72%  | 88.83%   | 76.01%    | 73.97% | 94.24% | 23.64% |
+
+\* use same radii and k as TGNet
 
 ---
 ## <a name="attributes"></a> Point cloud attributes 
