@@ -4,7 +4,7 @@
 
 Toronto-3D is a large-scale urban outdoor point cloud dataset acquired by an MLS system in Toronto, Canada for semantic segmentation. This dataset covers approximately 1 km of road and consists of about 78.3 million points. Point clouds has [10 attributes](#attributes) and classified in [8 labelled object classes](#classes). There are some [known issues](#issues).
 
-Details on the dataset can be found at [arXiv](https://arxiv.org/abs/2003.08284). Revisions on the labels will lead to different results from the published paper, and updated results will be updated [here](#results).
+Details on the dataset can be found at [CVPRW2020](http://openaccess.thecvf.com/content_CVPRW_2020/html/w11/Tan_Toronto-3D_A_Large-Scale_Mobile_LiDAR_Dataset_for_Semantic_Segmentation_of_CVPRW_2020_paper.html). Revisions on the labels will lead to different results from the published paper, and updated results will be updated [here](#results).
 
 Dataset can be downloaded at [OneDrive](https://1drv.ms/u/s!Amlc6yZnF87psX6hKS8VOQllVvj4?e=yWhrYX) or [百度网盘](https://pan.baidu.com/s/16FVZqPU-I56rFRrGWoaxXA)(提取码：aewp).
 Check [Changelog](#changelog) for changes.
@@ -20,7 +20,7 @@ If you have questions, or any suggestions to help us improve the dataset, please
 
 More results to be added
 
-| Methods          | OA     | mIoU   | Road   | Road mrk | Natural | Building | Util line | Pole   | Car    | Fence  |
+| Method          | OA     | mIoU   | Road   | Road mrk | Natural | Building | Util line | Pole   | Car    | Fence  |
 |------------------|--------|--------|--------|----------|---------|----------|-----------|--------|--------|--------|
 | [PointNet++](https://github.com/charlesq34/pointnet2/blob/42926632a3c33461aebfbee2d829098b30a23aaa/models/pointnet2_sem_seg.py#L18)       | 84.88% | 41.81% | 89.27% | 0.00%    | 69.06%  | 54.16%   | 43.78%    | 23.30% | 52.00% | 2.95%  |
 | PointNet++ *     | 91.66% | 58.01% | 92.71% | 7.68%    | 84.30%  | 81.83%   | 67.44%    | 63.30% | 60.92% | 5.92%  |
