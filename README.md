@@ -54,7 +54,7 @@ More results to be added
 
 ---
 ## <a name="tip"></a> Data preparation tip
-The XY coordinates are stored in UTM format. The Y coordinate will have more than 16 digits, which may exceed precision in `float` type commonly used in point cloud processing algorithms. Directly read and process the coordinates could result in loss of detail and wrong geometric features.
+The XY coordinates are stored in UTM format. The Y coordinate may exceed decimal digits in `float` type commonly used in point cloud processing algorithms. Directly read and process the coordinates could result in loss of detail and wrong geometric features.
 
 I set a `UTM_OFFSET = [627285, 4841948, 0]` to subtract from the raw coordinates. You may use any other numbers to reduce number of digits.
 
