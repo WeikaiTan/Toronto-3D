@@ -2,7 +2,7 @@
 
 ![Image](Screenshots/Sample_RGB.png)
 
-Toronto-3D is a large-scale urban outdoor point cloud dataset acquired by an MLS system in Toronto, Canada for semantic segmentation. This dataset covers approximately 1 km of road and consists of about 78.3 million points. Point clouds has [10 attributes](#attributes) and classified in [8 labelled object classes](#classes). There are some [known issues](#issues).
+Toronto-3D is a large-scale urban outdoor point cloud dataset acquired by an MLS system in Toronto, Canada for semantic segmentation. This dataset covers approximately 1 km of road and consists of about 78.3 million points. Point clouds has [10 attributes](#attributes) and classified in [8 labelled object classes](#classes). There is a data preparation [tip](#tip) to handle UTM coordinates to avoid problems. There are also some [known issues](#issues).
 
 Details on the dataset can be found at [CVPRW2020](http://openaccess.thecvf.com/content_CVPRW_2020/html/w11/Tan_Toronto-3D_A_Large-Scale_Mobile_LiDAR_Dataset_for_Semantic_Segmentation_of_CVPRW_2020_paper.html). Revisions on the labels will lead to different results from the published paper, and updated results will be updated [here](#results).
 
@@ -20,7 +20,7 @@ If you have questions, or any suggestions to help us improve the dataset, please
 
 More results to be added
 
-| Method          | OA     | mIoU   | Road   | Road mrk | Natural | Building | Util line | Pole   | Car    | Fence  |
+| Method          | OA     | mIoU   | Road   | Road marking | Natural | Building | Utility line | Pole   | Car    | Fence  |
 |------------------|--------|--------|--------|----------|---------|----------|-----------|--------|--------|--------|
 | [PointNet++](https://github.com/charlesq34/pointnet2/blob/42926632a3c33461aebfbee2d829098b30a23aaa/models/pointnet2_sem_seg.py#L18)       | 84.88% | 41.81% | 89.27% | 0.00%    | 69.06%  | 54.16%   | 43.78%    | 23.30% | 52.00% | 2.95%  |
 | PointNet++ *     | 91.66% | 58.01% | 92.71% | 7.68%    | 84.30%  | 81.83%   | 67.44%    | 63.30% | 60.92% | 5.92%  |
@@ -53,7 +53,20 @@ More results to be added
 * unclassified (label 0)
 
 ---
+## <a name="tip"></a> Data preparation tip
+The XY coordinates are stored in UTM format. The Y coordinate will have more than 16 digits, which may exceed precision in `float` type commonly used in point cloud processing algorithms. Directly read and process the coordinates could result in loss of detail and wrong geometric features.
+
+I set a `UTM_OFFSET = [627285, 4841948, 0]` to subtract from the raw coordinates. You may use any other numbers to reduce number of digits.
+
+Example of potential issues during `grid_subsampling` operation used in KPConv and RandLA-Net: both subsampled to grid size 6cm
+
+| without offset | with offset |
+|:--------------:|:-----------:|
+| ![](Screenshots/without_offset.png) | ![](Screenshots/with_offset.png) |
+
+---
 ## <a name="issues"></a> Known issues 
+
 1. Point RGB assignments on taller vehicles.
 
 ![Image](Screenshots/Issue_1.png)
