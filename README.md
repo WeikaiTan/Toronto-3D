@@ -2,20 +2,38 @@
 
 ![Image](Screenshots/Sample_RGB.png)
 
+[**[Paper]**](https://openaccess.thecvf.com/content_CVPRW_2020/html/w11/Tan_Toronto-3D_A_Large-Scale_Mobile_LiDAR_Dataset_for_Semantic_Segmentation_of_CVPRW_2020_paper.html) [**[Download]**](#download)
+
 Toronto-3D is a large-scale urban outdoor point cloud dataset acquired by an MLS system in Toronto, Canada for semantic segmentation. This dataset covers approximately 1 km of road and consists of about 78.3 million points. Point clouds has [10 attributes](#attributes) and classified in [8 labelled object classes](#classes). There is a data preparation [tip](#tip) to handle UTM coordinates to avoid problems. There are also some [known issues](#issues).
 
 Details on the dataset can be found at [CVPRW2020](http://openaccess.thecvf.com/content_CVPRW_2020/html/w11/Tan_Toronto-3D_A_Large-Scale_Mobile_LiDAR_Dataset_for_Semantic_Segmentation_of_CVPRW_2020_paper.html). Revisions on the labels will lead to different results from the published paper, and updated results will be updated [here](#results).
 
+If you have questions, or any suggestions to help us improve the dataset, please contact [Weikai Tan](mailto:weikai.tan@uwaterloo.ca).
+
+---
+## <a name="download"></a> Download
+
 Dataset can be downloaded at [OneDrive](https://1drv.ms/u/s!Amlc6yZnF87psX6hKS8VOQllVvj4?e=yWhrYX) or [百度网盘](https://pan.baidu.com/s/16FVZqPU-I56rFRrGWoaxXA)(提取码：aewp).
 Check [Changelog](#changelog) for changes.
 
-Toronto-3D belongs to [Mobile Sensing and Geodata Science Lab](https://uwaterloo.ca/mobile-sensing/), University of Waterloo. 
+Toronto-3D belongs to [Mobile Sensing and Geodata Science Lab](https://uwaterloo.ca/mobile-sensing/), University of Waterloo. Toronto-3D is distributed under the [CC BY-NC 4.0](https://creativecommons.org/licenses/by-nc/4.0/) License
+## Citation
+
+Please consider citing our work:
+
+    @inproceedings{tan2020toronto3d,
+        title={Toronto-3D: A large-scale mobile lidar dataset for semantic segmentation of urban roadways},
+        author={Tan, Weikai and Qin, Nannan and Ma, Lingfei and Li, Ying and Du, Jing and Cai, Guorong and Yang, Ke and Li, Jonathan},
+        booktitle={Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition Workshops},
+        pages={202--203},
+        year={2020}
+    }
+
+## Acknowledgements
 
 Teledyne Optech is acknowledged for providing mobile LiDAR point cloud data collected by [Maverick](https://www.teledyneoptech.com/en/products/mobile-survey/maverick/). Thanks Jing Du and Dr. Guorong Cai from Jimei University for point cloud labelling.
 
 Thanks Intel ISL for including our dataset in the [Open3D-ML](https://github.com/intel-isl/Open3D-ML) 3D Machine Learning module.
-
-If you have questions, or any suggestions to help us improve the dataset, please contact [Weikai Tan](mailto:weikai.tan@uwaterloo.ca).
 
 ---
 ## <a name="results"></a> Semantic segmentation results with point coordinates
@@ -81,6 +99,7 @@ Example of potential issues during `grid_subsampling` operation used in KPConv a
 3. Point acquisition on moving vehicles.
 
 ![Image](Screenshots/Issue_3.png)
+
 ---
 ## <a name="changelog"></a> Changelog 
 
