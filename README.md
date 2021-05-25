@@ -1,8 +1,9 @@
 # Toronto-3D: A Large-scale Mobile LiDAR Dataset for Semantic Segmentation of Urban Roadways
 
+[**[Paper]**](https://openaccess.thecvf.com/content_CVPRW_2020/html/w11/Tan_Toronto-3D_A_Large-Scale_Mobile_LiDAR_Dataset_for_Semantic_Segmentation_of_CVPRW_2020_paper.html) [**[Download]**](#download) [**[Results]**](#results)
+
 ![Image](Screenshots/Sample_RGB.png)
 
-[**[Paper]**](https://openaccess.thecvf.com/content_CVPRW_2020/html/w11/Tan_Toronto-3D_A_Large-Scale_Mobile_LiDAR_Dataset_for_Semantic_Segmentation_of_CVPRW_2020_paper.html) [**[Download]**](#download)
 
 Toronto-3D is a large-scale urban outdoor point cloud dataset acquired by an MLS system in Toronto, Canada for semantic segmentation. This dataset covers approximately 1 km of road and consists of about 78.3 million points. Point clouds has [10 attributes](#attributes) and classified in [8 labelled object classes](#classes). There is a data preparation [tip](#tip) to handle UTM coordinates to avoid problems. There are also some [known issues](#issues).
 
@@ -11,48 +12,33 @@ Details on the dataset can be found at [CVPRW2020](http://openaccess.thecvf.com/
 If you have questions, or any suggestions to help us improve the dataset, please contact [Weikai Tan](mailto:weikai.tan@uwaterloo.ca).
 
 ---
-## <a name="download"></a> Download
-
-Dataset can be downloaded at [OneDrive](https://1drv.ms/u/s!Amlc6yZnF87psX6hKS8VOQllVvj4?e=yWhrYX) or [百度网盘](https://pan.baidu.com/s/16FVZqPU-I56rFRrGWoaxXA)(提取码：aewp).
-Check [Changelog](#changelog) for changes.
-
-Toronto-3D belongs to [Mobile Sensing and Geodata Science Lab](https://uwaterloo.ca/mobile-sensing/), University of Waterloo. Toronto-3D is distributed under the [CC BY-NC 4.0](https://creativecommons.org/licenses/by-nc/4.0/) License
-## Citation
-
-Please consider citing our work:
-
-    @inproceedings{tan2020toronto3d,
-        title={Toronto-3D: A large-scale mobile lidar dataset for semantic segmentation of urban roadways},
-        author={Tan, Weikai and Qin, Nannan and Ma, Lingfei and Li, Ying and Du, Jing and Cai, Guorong and Yang, Ke and Li, Jonathan},
-        booktitle={Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition Workshops},
-        pages={202--203},
-        year={2020}
-    }
-
-## Acknowledgements
-
-Teledyne Optech is acknowledged for providing mobile LiDAR point cloud data collected by [Maverick](https://www.teledyneoptech.com/en/products/mobile-survey/maverick/). Thanks Jing Du and Dr. Guorong Cai from Jimei University for point cloud labelling.
-
-Thanks Intel ISL for including our dataset in the [Open3D-ML](https://github.com/intel-isl/Open3D-ML) 3D Machine Learning module.
-
----
-## <a name="results"></a> Semantic segmentation results with point coordinates
+## <a name="results"></a> Semantic segmentation results (%)
 
 More results to be added
 
+*Default: point coordinates only*
+
+
 | Method          | OA     | mIoU   | Road   | Road marking | Natural | Building | Utility line | Pole   | Car    | Fence  |
 |------------------|--------|--------|--------|----------|---------|----------|-----------|--------|--------|--------|
-| [PointNet++](https://github.com/charlesq34/pointnet2/blob/42926632a3c33461aebfbee2d829098b30a23aaa/models/pointnet2_sem_seg.py#L18)       | 84.88% | 41.81% | 89.27% | 0.00%    | 69.06%  | 54.16%   | 43.78%    | 23.30% | 52.00% | 2.95%  |
-| PointNet++ *     | 91.66% | 58.01% | 92.71% | 7.68%    | 84.30%  | 81.83%   | 67.44%    | 63.30% | 60.92% | 5.92%  |
-| [PointNet++ MSG](https://github.com/charlesq34/pointnet2/blob/42926632a3c33461aebfbee2d829098b30a23aaa/models/pointnet2_cls_msg.py#L17) | 92.56% | 59.47% | 92.90% | 0.00%    | 86.13%  | 82.15%   | 60.96%    | 62.81% | 76.41% | 14.43% |
-| [DGCNN](https://github.com/WangYueFt/dgcnn/blob/20fdb459ca5d10fe8aba1d296e66340f65990b85/tensorflow/sem_seg/model.py#L20)  | 94.24% | 61.79% | 93.88% | 0.00% | 91.25% | 80.39% | 62.40% | 62.32% | 88.26% | 15.81% |
-| [KPFCNN](https://github.com/HuguesTHOMAS/KPConv/blob/132fdc628fb4850548e931c8b02c6325e7cac85e/training_NPM3D.py#L49)           | 95.39% | 69.11% | 94.62% | 0.06%    | 96.07%  | 91.51%   | 87.68%    | 81.56% | 85.66% | 15.72% |
-| [MS-PCNN](https://doi.org/10.1109/TITS.2019.2961060) | 90.03% | 65.89% | 93.84% | 3.83% | 93.46% | 82.59% | 67.80% | 71.95% | 91.12% | 22.50% |
-| [TGNet](https://doi.org/10.1109/TGRS.2019.2958517) | 94.08% | 61.34% | 93.54% | 0.00%    | 90.83%  | 81.57%   | 65.26%    | 62.98% | 88.73% | 7.85%  |
-| MS-TGNet         | 95.71% | 70.50% | 94.41% | 17.19%   | 95.72%  | 88.83%   | 76.01%    | 73.97% | 94.24% | 23.64% |
-| [RandLA-Net](https://github.com/QingyongHu/RandLA-Net) | 88.43% | 74.27% | 87.43% | 22.04%   | 96.36%  | 92.69%   | 85.93%    | 75.50% | 86.60% | 47.64% |
+| [PointNet++](https://github.com/charlesq34/pointnet2/blob/42926632a3c33461aebfbee2d829098b30a23aaa/models/pointnet2_sem_seg.py#L18)       | 84.88 | 41.81 | 89.27 | 0.00    | 69.0 | 54.1 | 43.7 | 23.3 | 52.0 | 3.0  |
+| PointNet++ *     | 91.66 | 58.01 | 92.71 | 7.68    | 84.30  | 81.83   | 67.44    | 63.30 | 60.92 | 5.92  |
+| [PointNet++ MSG](https://github.com/charlesq34/pointnet2/blob/42926632a3c33461aebfbee2d829098b30a23aaa/models/pointnet2_cls_msg.py#L17) | 92.56 | 59.47 | 92.90 | 0.00    | 86.13  | 82.15   | 60.96    | 62.81 | 76.41 | 14.43 |
+| [DGCNN](https://github.com/WangYueFt/dgcnn/blob/20fdb459ca5d10fe8aba1d296e66340f65990b85/tensorflow/sem_seg/model.py#L20)  | 94.24 | 61.79 | 93.88 | 0.00 | 91.25 | 80.39 | 62.40 | 62.32 | 88.26 | 15.81 |
+| [KPFCNN](https://github.com/HuguesTHOMAS/KPConv/blob/132fdc628fb4850548e931c8b02c6325e7cac85e/training_NPM3D.py#L49)           | 95.39 | 69.11 | 94.62 | 0.06    | 96.07  | 91.51   | 87.68    | 81.56 | 85.66 | 15.72 |
+| [MS-PCNN](https://doi.org/10.1109/TITS.2019.2961060) | 90.03 | 65.89 | 93.84 | 3.83 | 93.46 | 82.59 | 67.80 | 71.95 | 91.12 | 22.50 |
+| [TGNet](https://doi.org/10.1109/TGRS.2019.2958517) | 94.08 | 61.34 | 93.54 | 0.00    | 90.83  | 81.57   | 65.26    | 62.98 | 88.73 | 7.85  |
+| [MS-TGNet](https://openaccess.thecvf.com/content_CVPRW_2020/html/w11/Tan_Toronto-3D_A_Large-Scale_Mobile_LiDAR_Dataset_for_Semantic_Segmentation_of_CVPRW_2020_paper.html)  | 95.71 | 70.50 | 94.41 | 17.19   | 95.72  | 88.83   | 76.01    | 73.97 | 94.24 | 23.64 |
+| [RandLA-Net](https://github.com/QingyongHu/RandLA-Net) | 88.43 | 74.27 | 87.43 | 22.04   | 96.36  | 92.69   | 85.93    | 75.50 | 86.60 | 47.64 |
+| Rand-LANet (RGB) | 94.26 | 81.11 | 96.54 | 64.25 | 96.77 | 94.48 | 86.25 | 76.04 | 91.72 | 42.85 |
+| [Hu, 2021](https://arxiv.org/abs/2104.04891)  | 95.63 | 77.72 | 94.53 | 42.44 | 96.62 | 93.10 | 86.56 | 76.83 | 92.55 | 39.14 |
+| [Hu, 2021](https://arxiv.org/abs/2104.04891) (RGB) | 97.15 | 81.88 | 96.69 | 64.10 | 96.85 | 94.14 | 88.03 | 77.48 | 93.21 | 44.53 |
+| [Han, 2021](https://doi.org/10.1016/j.isprsjprs.2021.03.001) (Normal + intensity) | 93.60 | 70.80 | 92.20 | 53.80 | 92.80 | 86.00 | 72.20 | 72.50 | 75.70 | 21.20 |
 
-\* use same radii and k as TGNet
+*\* use same radii and k as TGNet*
+
+
+
 
 ---
 ## <a name="attributes"></a> Point cloud attributes 
@@ -99,6 +85,32 @@ Example of potential issues during `grid_subsampling` operation used in KPConv a
 3. Point acquisition on moving vehicles.
 
 ![Image](Screenshots/Issue_3.png)
+
+
+---
+## <a name="download"></a> Download
+
+Dataset can be downloaded at [OneDrive](https://1drv.ms/u/s!Amlc6yZnF87psX6hKS8VOQllVvj4?e=yWhrYX) or [百度网盘](https://pan.baidu.com/s/16FVZqPU-I56rFRrGWoaxXA)(提取码：aewp).
+Check [Changelog](#changelog) for changes.
+
+Toronto-3D belongs to [Mobile Sensing and Geodata Science Lab](https://uwaterloo.ca/mobile-sensing/), University of Waterloo. Toronto-3D is distributed under the [CC BY-NC 4.0](https://creativecommons.org/licenses/by-nc/4.0/) License
+## Citation
+
+Please consider citing our work:
+
+    @inproceedings{tan2020toronto3d,
+        title={Toronto-3D: A large-scale mobile lidar dataset for semantic segmentation of urban roadways},
+        author={Tan, Weikai and Qin, Nannan and Ma, Lingfei and Li, Ying and Du, Jing and Cai, Guorong and Yang, Ke and Li, Jonathan},
+        booktitle={Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition Workshops},
+        pages={202--203},
+        year={2020}
+    }
+
+## Acknowledgements
+
+Teledyne Optech is acknowledged for providing mobile LiDAR point cloud data collected by [Maverick](https://www.teledyneoptech.com/en/products/mobile-survey/maverick/). Thanks Jing Du and Dr. Guorong Cai from Jimei University for point cloud labelling.
+
+Thanks Intel ISL for including our dataset in the [Open3D-ML](https://github.com/intel-isl/Open3D-ML) 3D Machine Learning module.
 
 ---
 ## <a name="changelog"></a> Changelog 
