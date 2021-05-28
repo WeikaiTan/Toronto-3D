@@ -22,18 +22,16 @@ More results to be added
 | Method          | OA     | mIoU   | Road   | Road marking | Natural | Building | Utility line | Pole   | Car    | Fence  |
 |------------------|--------|--------|--------|----------|---------|----------|-----------|--------|--------|--------|
 | [PointNet++](https://github.com/charlesq34/pointnet2/blob/42926632a3c33461aebfbee2d829098b30a23aaa/models/pointnet2_sem_seg.py#L18)       | 84.88 | 41.81 | 89.27 | 0.00    | 69.0 | 54.1 | 43.7 | 23.3 | 52.0 | 3.0  |
-| PointNet++ *     | 91.66 | 58.01 | 92.71 | 7.68    | 84.30  | 81.83   | 67.44    | 63.30 | 60.92 | 5.92  |
 | [PointNet++ MSG](https://github.com/charlesq34/pointnet2/blob/42926632a3c33461aebfbee2d829098b30a23aaa/models/pointnet2_cls_msg.py#L17) | 92.56 | 59.47 | 92.90 | 0.00    | 86.13  | 82.15   | 60.96    | 62.81 | 76.41 | 14.43 |
+| PointNet++ *     | 91.66 | 58.01 | 92.71 | 7.68    | 84.30  | 81.83   | 67.44    | 63.30 | 60.92 | 5.92  |
 | [DGCNN](https://github.com/WangYueFt/dgcnn/blob/20fdb459ca5d10fe8aba1d296e66340f65990b85/tensorflow/sem_seg/model.py#L20)  | 94.24 | 61.79 | 93.88 | 0.00 | 91.25 | 80.39 | 62.40 | 62.32 | 88.26 | 15.81 |
 | [KPFCNN](https://github.com/HuguesTHOMAS/KPConv/blob/132fdc628fb4850548e931c8b02c6325e7cac85e/training_NPM3D.py#L49)           | 95.39 | 69.11 | 94.62 | 0.06    | 96.07  | 91.51   | 87.68    | 81.56 | 85.66 | 15.72 |
 | [MS-PCNN](https://doi.org/10.1109/TITS.2019.2961060) | 90.03 | 65.89 | 93.84 | 3.83 | 93.46 | 82.59 | 67.80 | 71.95 | 91.12 | 22.50 |
 | [TGNet](https://doi.org/10.1109/TGRS.2019.2958517) | 94.08 | 61.34 | 93.54 | 0.00    | 90.83  | 81.57   | 65.26    | 62.98 | 88.73 | 7.85  |
 | [MS-TGNet](https://openaccess.thecvf.com/content_CVPRW_2020/html/w11/Tan_Toronto-3D_A_Large-Scale_Mobile_LiDAR_Dataset_for_Semantic_Segmentation_of_CVPRW_2020_paper.html)  | 95.71 | 70.50 | 94.41 | 17.19   | 95.72  | 88.83   | 76.01    | 73.97 | 94.24 | 23.64 |
-| [RandLA-Net](https://github.com/QingyongHu/RandLA-Net) | 88.43 | 74.27 | 87.43 | 22.04   | 96.36  | 92.69   | 85.93    | 75.50 | 86.60 | 47.64 |
-| Rand-LANet (RGB) | 94.26 | 81.11 | 96.54 | 64.25 | 96.77 | 94.48 | 86.25 | 76.04 | 91.72 | 42.85 |
-| [Hu, 2021](https://arxiv.org/abs/2104.04891)  | 95.63 | 77.72 | 94.53 | 42.44 | 96.62 | 93.10 | 86.56 | 76.83 | 92.55 | 39.14 |
-| [Hu, 2021](https://arxiv.org/abs/2104.04891) (RGB) | 97.15 | 81.88 | 96.69 | 64.10 | 96.85 | 94.14 | 88.03 | 77.48 | 93.21 | 44.53 |
-| [Han, 2021](https://doi.org/10.1016/j.isprsjprs.2021.03.001) (Normal + intensity) | 93.60 | 70.80 | 92.20 | 53.80 | 92.80 | 86.00 | 72.20 | 72.50 | 75.70 | 21.20 |
+| [RandLA-Net](https://doi.org/10.1109/TPAMI.2021.3083288) | 92.95 | 77.71 | 94.61 | 42.62 | 96.89 | 93.01 | 86.51 | 78.07 | 92.85 | 37.12 |
+| [RandLA-Net (RGB)](https://doi.org/10.1109/TPAMI.2021.3083288) | 94.37 | 81.77 | 96.69 | 64.21 | 96.92 | 94.24 | 88.06 | 77.84 | 93.37 | 42.86 |
+| [Han, 2021](https://doi.org/10.1016/j.isprsjprs.2021.03.001) (Intensity + Normal) | 93.60 | 70.80 | 92.20 | 53.80 | 92.80 | 86.00 | 72.20 | 72.50 | 75.70 | 21.20 |
 
 *\* use same radii and k as TGNet*
 
