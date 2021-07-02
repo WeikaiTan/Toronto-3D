@@ -5,7 +5,11 @@
 ![Image](Screenshots/Sample_RGB.png)
 
 
-Toronto-3D is a large-scale urban outdoor point cloud dataset acquired by an MLS system in Toronto, Canada for semantic segmentation. This dataset covers approximately 1 km of road and consists of about 78.3 million points. Point clouds has [10 attributes](#attributes) and classified in [8 labelled object classes](#classes). There is a data preparation [tip](#tip) to handle UTM coordinates to avoid problems. There are also some [known issues](#issues).
+Toronto-3D is a large-scale urban outdoor point cloud dataset acquired by an MLS system in Toronto, Canada for semantic segmentation. This dataset covers approximately 1 km of road and consists of about 78.3 million points. Here is an overview of the dataset and the tiles. The approximate location of the dataset is at [(43.726, -79.417)](https://goo.gl/maps/g6mXjzVfw9pKbL546).
+
+![Image](Screenshots/Overview.png)
+
+Point clouds has [10 attributes](#attributes) and classified in [8 labelled object classes](#classes). There is a data preparation [tip](#tip) to handle UTM coordinates to avoid problems. There are also some [known issues](#issues).
 
 Details on the dataset can be found at [CVPRW2020](http://openaccess.thecvf.com/content_CVPRW_2020/html/w11/Tan_Toronto-3D_A_Large-Scale_Mobile_LiDAR_Dataset_for_Semantic_Segmentation_of_CVPRW_2020_paper.html). Revisions on the labels will lead to different results from the published paper, and updated results will be updated [here](#results).
 
@@ -19,7 +23,7 @@ More results to be added
 *Default: point coordinates only*
 
 
-| Method          | OA     | mIoU   | Road   | Road marking | Natural | Building | Utility line | Pole   | Car    | Fence  |
+| Method          | OA     | mIoU   | Road   | Road mrk. | Natural | Bldg | Util. line | Pole   | Car    | Fence  |
 |------------------|--------|--------|--------|----------|---------|----------|-----------|--------|--------|--------|
 | [PointNet++](https://github.com/charlesq34/pointnet2/blob/42926632a3c33461aebfbee2d829098b30a23aaa/models/pointnet2_sem_seg.py#L18)       | 84.88 | 41.81 | 89.27 | 0.00    | 69.0 | 54.1 | 43.7 | 23.3 | 52.0 | 3.0  |
 | [PointNet++ MSG](https://github.com/charlesq34/pointnet2/blob/42926632a3c33461aebfbee2d829098b30a23aaa/models/pointnet2_cls_msg.py#L17) | 92.56 | 59.47 | 92.90 | 0.00    | 86.13  | 82.15   | 60.96    | 62.81 | 76.41 | 14.43 |
