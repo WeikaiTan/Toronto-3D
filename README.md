@@ -35,9 +35,11 @@ More results to be added
 | [MS-TGNet](https://openaccess.thecvf.com/content_CVPRW_2020/html/w11/Tan_Toronto-3D_A_Large-Scale_Mobile_LiDAR_Dataset_for_Semantic_Segmentation_of_CVPRW_2020_paper.html)  | 95.71 | 70.50 | 94.41 | 17.19   | 95.72  | 88.83   | 76.01    | 73.97 | 94.24 | 23.64 |
 | RandLA-Net [Hu, et al., 2021](https://doi.org/10.1109/TPAMI.2021.3083288) | 92.95 | 77.71 | 94.61 | 42.62 | 96.89 | 93.01 | 86.51 | 78.07 | 92.85 | 37.12 |
 | [Rim et al., 2021](https://doi.org/10.3390/rs13163121) | 72.55 | 66.87 | 92.74 | 14.75 | 88.66 | 93.52 | 81.03 | 67.71 | 39.65 | 56.90 |
+| MappingConvSeg [Yan, et al., 2021](https://doi.org/10.1109/LGRS.2021.3107006) | 93.17 | 77.57 | 95.02 | 39.27 | 96.77 | 93.32 | 86.37 | 79.11 | 89.81 | 40.89 |
 | **Use RGB**
 | RandLA-Net [Hu, et al., 2021](https://doi.org/10.1109/TPAMI.2021.3083288) (RGB)| 94.37 | 81.77 | 96.69 | 64.21 | 96.92 | 94.24 | 88.06 | 77.84 | 93.37 | 42.86 |
 | [Rim et al., 2021](https://doi.org/10.3390/rs13163121) (RGB) | 83.60 | 71.03 | 92.84 | 27.43 | 89.90 | 95.27 | 85.59 | 74.50 | 44.41 | 58.30 |
+| MappingConvSeg [Yan, et al., 2021](https://doi.org/10.1109/LGRS.2021.3107006) | 94.72 | 82.89 | 97.15 | 67.87 | 97.55 | 93.75 | 86.88 | 82.12 | 93.72 | 44.11 |
 | **Others**
 | [Han et al., 2021](https://doi.org/10.1016/j.isprsjprs.2021.03.001) (Intensity + Normal) | 93.60 | 70.80 | 92.20 | 53.80 | 92.80 | 86.00 | 72.20 | 72.50 | 75.70 | 21.20 |
 
