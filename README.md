@@ -1,6 +1,6 @@
 # Toronto-3D: A Large-scale Mobile LiDAR Dataset for Semantic Segmentation of Urban Roadways
 
-[**[Paper]**](https://openaccess.thecvf.com/content_CVPRW_2020/html/w11/Tan_Toronto-3D_A_Large-Scale_Mobile_LiDAR_Dataset_for_Semantic_Segmentation_of_CVPRW_2020_paper.html) [**[Download]**](#download) [**[Results]**](#results)
+[**[Paper]**](https://openaccess.thecvf.com/content_CVPRW_2020/html/w11/Tan_Toronto-3D_A_Large-Scale_Mobile_LiDAR_Dataset_for_Semantic_Segmentation_of_CVPRW_2020_paper.html) [**[Download]**](#download) [**[Results]**](#results) [**[Codes]**](#code)
 
 ![Image](Screenshots/Sample_RGB.png)
 
@@ -47,7 +47,9 @@ More results to be added
 *\* use same radii and k as TGNet*
 
 
-
+---
+## <a name="code"></a> Codes for training your own network
+* [Code for RandLA-Net](https://github.com/WeikaiTan/RandLA-Net.git)
 
 ---
 ## <a name="attributes"></a> Point cloud attributes 
@@ -108,7 +110,7 @@ Toronto-3D belongs to [Mobile Sensing and Geodata Science Lab](https://uwaterloo
 Please consider citing our work:
 
     @inproceedings{tan2020toronto3d,
-        title={Toronto-3D: A large-scale mobile lidar dataset for semantic segmentation of urban roadways},
+        title={{Toronto-3D}: A large-scale mobile lidar dataset for semantic segmentation of urban roadways},
         author={Tan, Weikai and Qin, Nannan and Ma, Lingfei and Li, Ying and Du, Jing and Cai, Guorong and Yang, Ke and Li, Jonathan},
         booktitle={Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition Workshops},
         pages={202--203},
@@ -123,6 +125,7 @@ Thanks Intel ISL for including our dataset in the [Open3D-ML](https://github.com
 
 ---
 ## <a name="changelog"></a> Changelog 
+* [2023-02-07] Added code for RandLA-Net
 
 * [2020-04-23] Uploaded newest version. Fixed some labelling errors. Major revision on cars.
 
