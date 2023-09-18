@@ -50,6 +50,7 @@ More results to be added
 ---
 ## <a name="code"></a> Codes for training your own network
 * [Code for RandLA-Net](https://github.com/WeikaiTan/RandLA-Net.git)
+* [Code for KPFCNN](https://github.com/HuguesTHOMAS/KPConv-PyTorch) updated thanks to @Yarroudh
 
 ---
 ## <a name="attributes"></a> Point cloud attributes 
