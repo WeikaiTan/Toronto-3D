@@ -18,39 +18,50 @@ If you have questions, or any suggestions to help us improve the dataset, please
 ---
 ## <a name="results"></a> Semantic segmentation results (%)
 
-More results to be added
-
-*Default: point coordinates only*
+More results to update
 
 
 | Method          | OA     | mIoU   | Road   | Road mrk. | Natural | Bldg | Util. line | Pole   | Car    | Fence  |
 |------------------|--------|--------|--------|----------|---------|----------|-----------|--------|--------|--------|
-| [PointNet++](https://github.com/charlesq34/pointnet2/blob/42926632a3c33461aebfbee2d829098b30a23aaa/models/pointnet2_sem_seg.py#L18)       | 84.88 | 41.81 | 89.27 | 0.00    | 69.0 | 54.1 | 43.7 | 23.3 | 52.0 | 3.0  |
+| **Use XYZ**
+| [PointNet++](https://github.com/charlesq34/pointnet2/blob/42926632a3c33461aebfbee2d829098b30a23aaa/models/pointnet2_sem_seg.py#L18)       | 84.88 | 41.81 | 89.27 | 0.00 | 69.00 | 54.10 | 43.70 | 23.30 | 52.00 | 3.00 |
 | [PointNet++ MSG](https://github.com/charlesq34/pointnet2/blob/42926632a3c33461aebfbee2d829098b30a23aaa/models/pointnet2_cls_msg.py#L17) | 92.56 | 59.47 | 92.90 | 0.00    | 86.13  | 82.15   | 60.96    | 62.81 | 76.41 | 14.43 |
-| PointNet++ *     | 91.66 | 58.01 | 92.71 | 7.68    | 84.30  | 81.83   | 67.44    | 63.30 | 60.92 | 5.92  |
 | [DGCNN](https://github.com/WangYueFt/dgcnn/blob/20fdb459ca5d10fe8aba1d296e66340f65990b85/tensorflow/sem_seg/model.py#L20)  | 94.24 | 61.79 | 93.88 | 0.00 | 91.25 | 80.39 | 62.40 | 62.32 | 88.26 | 15.81 |
 | [KPFCNN](https://github.com/HuguesTHOMAS/KPConv/blob/132fdc628fb4850548e931c8b02c6325e7cac85e/training_NPM3D.py#L49)           | 95.39 | 69.11 | 94.62 | 0.06    | 96.07  | 91.51   | 87.68    | 81.56 | 85.66 | 15.72 |
 | [MS-PCNN](https://doi.org/10.1109/TITS.2019.2961060) | 90.03 | 65.89 | 93.84 | 3.83 | 93.46 | 82.59 | 67.80 | 71.95 | 91.12 | 22.50 |
 | [TGNet](https://doi.org/10.1109/TGRS.2019.2958517) | 94.08 | 61.34 | 93.54 | 0.00    | 90.83  | 81.57   | 65.26    | 62.98 | 88.73 | 7.85  |
+| PointNet++ (use same radii and k as TGNet)     | 91.66 | 58.01 | 92.71 | 7.68    | 84.30  | 81.83   | 67.44    | 63.30 | 60.92 | 5.92  |
 | [MS-TGNet](https://openaccess.thecvf.com/content_CVPRW_2020/html/w11/Tan_Toronto-3D_A_Large-Scale_Mobile_LiDAR_Dataset_for_Semantic_Segmentation_of_CVPRW_2020_paper.html)  | 95.71 | 70.50 | 94.41 | 17.19   | 95.72  | 88.83   | 76.01    | 73.97 | 94.24 | 23.64 |
-| RandLA-Net [(Hu, et al., 2021)](https://doi.org/10.1109/TPAMI.2021.3083288) | 92.95 | 77.71 | 94.61 | 42.62 | 96.89 | 93.01 | 86.51 | 78.07 | 92.85 | 37.12 |
+| RandLA-Net ([Hu, et al., 2021](https://doi.org/10.1109/TPAMI.2021.3083288)) | 92.95 | 77.71 | 94.61 | 42.62 | 96.89 | 93.01 | 86.51 | 78.07 | 92.85 | 37.12 |
 | [Rim et al., 2021](https://doi.org/10.3390/rs13163121) | 72.55 | 66.87 | 92.74 | 14.75 | 88.66 | 93.52 | 81.03 | 67.71 | 39.65 | 56.90 |
-| MappingConvSeg [(Yan, et al., 2021)](https://doi.org/10.1109/LGRS.2021.3107006) | 93.17 | 77.57 | 95.02 | 39.27 | 96.77 | 93.32 | 86.37 | 79.11 | 89.81 | 40.89 |
-| DiffConv [(Lin & Feragen, 2022)](https://doi.org/10.1007/978-3-031-20062-5_22) | - | 76.73 | 83.31 | 51.06 | 69.04 | 79.55 | 80.48 | 84.41 | 76.19 | 89.83 |
-| EyeNet [(Yoo et al., 2023)](https://doi.org/10.1109/CVPRW59228.2023.00699) | 94.63 | 81.13 | 96.98 | 65.02 | 97.83 | 93.51 | 86.77 | 84.86 | 94.02 | 30.01 |
-| LACV-Net [(Zeng et al., 2024)](https://doi.org/10.1016/j.eswa.2024.123269) | 95.8 | 78.5 | 94.8 | 42.7 | 96.7 | 91.4 | 88.2 | 79.6 | 93.9 | 40.6 |
-| DCTNet [(Lu et al., 2024)](https://doi.org/10.1016/j.jag.2024.103791) | - | 81.84 | 82.77 | 59.53 | 85.51 | 86.47 | 81.79 | 84.03 | 79.55 | 96.21 |
-| **Use RGB**
-| RandLA-Net [(Hu, et al., 2021)](https://doi.org/10.1109/TPAMI.2021.3083288) (RGB)| 94.37 | 81.77 | 96.69 | 64.21 | 96.92 | 94.24 | 88.06 | 77.84 | 93.37 | 42.86 |
-| [Rim et al., 2021](https://doi.org/10.3390/rs13163121) (RGB) | 83.60 | 71.03 | 92.84 | 27.43 | 89.90 | 95.27 | 85.59 | 74.50 | 44.41 | 58.30 |
-| MappingConvSeg [(Yan, et al., 2021)](https://doi.org/10.1109/LGRS.2021.3107006) | 94.72 | 82.89 | 97.15 | 67.87 | 97.55 | 93.75 | 86.88 | 82.12 | 93.72 | 44.11 |
-| ResDLPS-Net [(Du et al., 2021)](https://doi.org/10.1016/j.isprsjprs.2021.09.024) | 96.49 | 80.27 | 95.82 | 59.80 | 96.10 | 90.96 | 86.82 | 79.95 | 89.41 | 43.31 |
-| LACV-Net [(Zeng et al., 2024)](https://doi.org/10.1016/j.eswa.2024.123269) | 97.4 | 82.7 | 97.1 | 66.9 | 97.3 | 93.0 | 87.3 | 83.4 | 93.4 | 43.1 |
+| MappingConvSeg ([Yan, et al., 2021](https://doi.org/10.1109/LGRS.2021.3107006)) | 93.17 | 77.57 | 95.02 | 39.27 | 96.77 | 93.32 | 86.37 | 79.11 | 89.81 | 40.89 |
+| DiffConv ([Lin & Feragen, 2022](https://doi.org/10.1007/978-3-031-20062-5_22)) | - | 76.73 | 83.31 | 51.06 | 69.04 | 79.55 | 80.48 | 84.41 | 76.19 | 89.83 |
+| EyeNet ([Yoo et al., 2023](https://doi.org/10.1109/CVPRW59228.2023.00699)) | 94.63 | 81.13 | 96.98 | 65.02 | 97.83 | 93.51 | 86.77 | 84.86 | 94.02 | 30.01 |
+| GAANet ([Wan et al., 2023](https://doi.org/10.1080/13658816.2022.2111572)) | 92.70 | 65.10 | 92.70 | 39.30 | 92.90 | 88.40 | 78.00 | 68.70 | 75.10 | 24.10 |
+| LACV-Net ([Zeng et al., 2024](https://doi.org/10.1016/j.eswa.2024.123269)) | 95.80 | 78.50 | 94.80 | 42.70 | 96.70 | 91.40 | 88.20 | 79.60 | 93.90 | 40.60 |
+| DCTNet ([Lu et al., 2024](https://doi.org/10.1016/j.jag.2024.103791)) | - | 81.84 | 82.77 | 59.53 | 85.51 | 86.47 | 81.79 | 84.03 | 79.55 | 96.21 |
+| U-Next ([Zeng et al., 2025](https://doi.org/10.1016/j.jag.2024.104309)) | 96.00 | 79.20 | 95.10 | 44.80 | 97.20 | 93.50 | 87.60 | 80.50 | 94.30 | 40.80 |
+| 3DLST ([Lu et al., 2025](https://doi.org/10.1016/j.jag.2025.104572)) | 95.80 | 76.40 | 94.30 | 42.90 | 96.50 | 91.70 | 74.50 | 77.10 | 92.60 | 41.40 |
+| PGFormer ([Xia et al., 2025](https://doi.org/10.1109/TGRS.2025.3592194)) | 94.80 | 73.90 | 93.00 | 0.00 | 93.00 | 89.80 | 89.30 | 79.90 | 86.90 | 58.70 |
+| EyeNet++ ([Yoo et al., 2025](https://doi.org/10.1109/TGRS.2025.3589287)) | 94.70 | 81.70 | 97.10 | 66.00 | 97.40 | 93.60 | 87.90 | 84.30 | 95.20 | 32.00 |
+| **Use XYZ + RGB**
+| RandLA-Net ([Hu, et al., 2021](https://doi.org/10.1109/TPAMI.2021.3083288)) | 94.37 | 81.77 | 96.69 | 64.21 | 96.92 | 94.24 | 88.06 | 77.84 | 93.37 | 42.86 |
+| [Rim et al., 2021](https://doi.org/10.3390/rs13163121) | 83.60 | 71.03 | 92.84 | 27.43 | 89.90 | 95.27 | 85.59 | 74.50 | 44.41 | 58.30 |
+| MappingConvSeg ([Yan, et al., 2021](https://doi.org/10.1109/LGRS.2021.3107006)) | 94.72 | 82.89 | 97.15 | 67.87 | 97.55 | 93.75 | 86.88 | 82.12 | 93.72 | 44.11 |
+| ResDLPS-Net ([Du et al., 2021](https://doi.org/10.1016/j.isprsjprs.2021.09.024)) | 96.49 | 80.27 | 95.82 | 59.80 | 96.10 | 90.96 | 86.82 | 79.95 | 89.41 | 43.31 |
+| MSAAN ([Geng et al., 2021](https://doi.org/10.3390/rs13040691)) | 95.90 | 75.00 | 96.10 | 59.90 | 94.40 | 85.40 | 88.70 | 83.70 | 83.70 | 17.70 |
+| LACV-Net ([Zeng et al., 2024](https://doi.org/10.1016/j.eswa.2024.123269)) | 97.40 | 82.70 | 97.10 | 66.90 | 97.30 | 93.00 | 87.30 | 83.40 | 93.40 | 43.10 |
+| PReFormer ([Akwensi et al., 2024](https://doi.org/10.1016/j.jag.2024.103730)) | 96.10 | 75.80 | 96.80 | 65.40 | 92.40 | 84.60 | 82.00 | 68.30 | 85.50 | 31.20 |
+| U-Next ([Zeng et al., 2025](https://doi.org/10.1016/j.jag.2024.104309)) | 97.70 | 84.00 | 97.30 | 68.60 | 97.70 | 95.20 | 88.40 | 86.10 | 95.10 | 43.20 |
+| 3DLST ([Lu et al., 2025](https://doi.org/10.1016/j.jag.2025.104572)) | 97.20 | 81.50 | 96.70 | 65.50 | 97.20 | 92.30 | 82.40 | 77.30 | 93.30 | 47.40 |
+| SAMNet++ ([Shahraki et al., 2025](https://doi.org/10.3390/rs17071256)) | 96.90 | 86.93 | 95.37 | 53.62 | 98.99 | 99.10 | 91.26 | 92.06 | 97.86 | 77.67 |
+| PGFormer ([Xia et al., 2025](https://doi.org/10.1109/TGRS.2025.3592194)) | 96.50 | 81.10 | 95.90 | 50.50 | 95.90 | 89.90 | 76.30 | 79.40 | 91.20 | 69.80 |
+| EyeNet++ ([Yoo et al., 2025](https://doi.org/10.1109/TGRS.2025.3589287)) | 95.00 | 83.60 | 97.50 | 70.20 | 97.70 | 94.10 | 87.80 | 85.10 | 96.10 | 40.50 |
+| InvSpaceNet ([Han et al., 2025](https://doi.org/10.1109/TPAMI.2025.3553051)) | 97.50 | 82.80 | 96.80 | 73.40 | 96.90 | 92.00 | 87.10 | 82.40 | 90.60 | 42.80 |
+| LCA ([Bayrak & Uzar, 2025](https://doi.org/10.3390/app15179503)) | 96.62 | 84.06 | 95.99 | 57.66 | 96.86 | 95.76 | 88.14 | 88.07 | 96.06 | 53.91 |
 | **Others**
-| [Han et al., 2021](https://doi.org/10.1016/j.isprsjprs.2021.03.001) (Intensity + Normal) | 93.60 | 70.80 | 92.20 | 53.80 | 92.80 | 86.00 | 72.20 | 72.50 | 75.70 | 21.20 |
-
-
-*\* use same radii and k as TGNet*
+| [Han et al., 2021](https://doi.org/10.1016/j.isprsjprs.2021.03.001) (XYZ + Intensity + Normal) | 93.60 | 70.80 | 92.20 | 53.80 | 92.80 | 86.00 | 72.20 | 72.50 | 75.70 | 21.20 |
+| 3D-UMamba ([Lu et al., 2025](https://doi.org/10.1016/j.jag.2025.104401)) (XYZ + RGB + Intensity) | 96.50 | 79.40 | 97.00 | 65.60 | 95.90 | 91.50 | 79.70 | 72.80 | 93.00 | 39.90 |
 
 
 ---
@@ -111,7 +122,7 @@ Example of potential issues during `grid_subsampling` operation used in KPConv a
 Dataset can be downloaded at [OneDrive](https://1drv.ms/u/s!Amlc6yZnF87psX6hKS8VOQllVvj4?e=yWhrYX) or [百度网盘](https://pan.baidu.com/s/16FVZqPU-I56rFRrGWoaxXA)(提取码：aewp).
 Check [Changelog](#changelog) for changes.
 
-Toronto-3D belongs to [Mobile Sensing and Geodata Science Lab](https://uwaterloo.ca/mobile-sensing/), University of Waterloo. Toronto-3D is distributed under the [CC BY-NC 4.0](https://creativecommons.org/licenses/by-nc/4.0/) License
+Toronto-3D belongs to [Geospatial Intelligence Lab]([https://uwaterloo.ca/mobile-sensing/](https://uwaterloo.ca/geospatial-intelligence/)), University of Waterloo. Toronto-3D is distributed under the [CC BY-NC 4.0](https://creativecommons.org/licenses/by-nc/4.0/) License
 ## Citation
 
 Please consider citing our work:
